@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour Packages</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:60px 20px 30px;
+}
+
+header h1{
+    font-size:42px;
+    color:#0a2540;
+}
+
+header p{
+    color:#666;
+}
+
+/* GRID */
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+    padding-bottom:80px;
+}
+
+/* CARD */
+.card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* SLIDER */
+.slider{
+    position:relative;
+    overflow:hidden;
+    height:260px;
+}
+
+/* SLIDES WRAPPER */
+.slides{
+    display:flex;
+    transition:0.6s ease-in-out;
+}
+
+/* EACH SLIDE */
+.slide{
+    min-width:100%;
+    height:260px;
+    position:relative;
+    overflow:hidden;
+}
+
+/* IMAGE FIX (IMPORTANT) */
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;       /* prevents stretching */
+    object-position:center;  /* keeps focus center */
+}
+
+/* CAPTION OVER IMAGE */
+.caption{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:12px 15px;
+    background:linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    color:#fff;
+    font-size:15px;
+}
+
+/* NAV BUTTONS */
+.nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,0.7);
+    border:none;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+    z-index:10;
+}
+
+.nav:hover{
+    background:#fff;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+/* CONTENT */
+.content{
+    padding:20px;
+}
+
+.content h2{
+    color:#0a2540;
+}
+
+.price{
+    color:#00a86b;
+    font-size:26px;
+    font-weight:700;
+    margin:10px 0;
+}
+
+.desc{
+    color:#666;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+ul{
+    list-style:none;
+    margin:10px 0 15px;
+}
+
+ul li{
+    padding-left:18px;
+    position:relative;
+    margin-bottom:6px;
+}
+
+ul li::before{
+    content:"✓";
+    color:#00a86b;
+    position:absolute;
+    left:0;
+}
+
+/* BUTTON */
+.book{
+    display:block;
+    text-align:center;
+    padding:12px;
+    background:linear-gradient(135deg,#0077ff,#00c6ff);
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.book:hover{
+    opacity:0.9;
+}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+    header h1{
+        font-size:32px;
+    }
+}
+
+
+/* Button Style */
+.back-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Hover effect */
+.back-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* Click effect */
+.back-btn:active {
+    transform: scale(0.97);
+}
+
+/* Arrow animation */
+.back-btn span {
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover span {
+    transform: translateX(-4px);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<button class="back-btn" onclick="window.location.href='index.html'">
+    <span>←</span> Back
+</button>
+
+ <img src="images/FINAL.png" width="250" height="100" >
+    <h1>Tour Packages</h1>
+    <p>Explore amazing destinations around the world</p>
+</header>
+
+<div class="container">
+
+<!-- PACKAGE 1 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(0,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/package1/package1-naditemple.jpg">
+                <div class="caption">Sri Siva Subramaniya Temple</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package1/package1-mudpool.jpg">
+                <div class="caption">Hot Spring and Mud Pool</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package1/package1-nadimarket.jpg">
+                <div class="caption">Nadi Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package1/package1-nadihandicraft.jpg">
+                <div class="caption">Nadi Handicraft Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package1/package1-naditown.jpg">
+                <div class="caption">Nadi Town</div>
+            </div>
+			
+			<div class="slide">
+                <img src="images/dest6-sleepinggaint.jpg">
+                <div class="caption">Garden of the Sleeping Giant</div>
+            </div>
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(0,1)">❯</button>
+    </div>
+
+    <div class="content">
+        <center><h2><u>Package 1</u> <br>Nadi Half Day</h2>  <br>
+        <div class="price">US$90/P</div>
+		 
+		<h3 style="color: #00a86b;">Children from 3-11 years 50% DISCOUNT</h3></center>
+        <p class="desc">Explore the best of Nadi with guided tours to top attractions including the Sri Siva Subramaniya Swami Temple, Hot Spring Mud Pool, Garden of the Sleeping Giant, Nadi Town, and local handicraft markets. Enjoy authentic Fijian culture, friendly expert guides, and affordable tour packages designed for adventure, sightseeing, and unforgettable Fiji travel experiences.<br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>Sri Siva Subramaniya Temple</li>
+            <li>Hot Spring and Mud Pool</li>
+            <li>Nadi Market</li>
+            <li>Nadi Handicraft Market</li>
+			<li>Nadi Town</li>
+			<li>Garden of the Sleeping Giant</li>
+        </ul>
+
+        <a href="https://wztours.rezdy.com/708482/package-1-nadi-half-day-tour?iframe=true" class="book">Book Now</a>
+    </div>
+</div>
+
+<!-- PACKAGE 2 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(1,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/package2/package2-firstlanding.jpg">
+                <div class="caption">First Landing Village</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package2/package2-mudpool.jpg">
+                <div class="caption"> Mud Pool</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package2/package2-hotspring.jpg">
+                <div class="caption">Hot Spring</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package2/package2-mudpool2.jpg">
+                <div class="caption">Mud Pool</div>
+            </div>
+
+           
+           
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(1,1)">❯</button>
+    </div>
+
+    <div class="content">
+	    <center><h2><u>Package 2</u> <br>First Landing Village & Hot Spring Mud Pool Tour</h2> </center>
+       
+       <center><div class="price">US$85/P</div>
+		 
+		<h3 style="color: #00a86b;">Children from 3-11 years 50% DISCOUNT</h3> </center>
+        <p class="desc">Discover the rich cultural heritage of Fiji at the First Landing Village, believed to be the landing site of the first Fijians on Viti Levu. Experience an authentic guided village tour, connect with friendly locals, and learn about traditional Fijian customs and way of life. Continue your adventure inland with a relaxing visit to the famous hot springs and mud pools, known for their natural healing and rejuvenating benefits. This unique tour offers the perfect blend of culture, relaxation, and adventure, making it a must-do experience for visitors exploring Fiji.<br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>First Landing Village</li>
+            <li>Hot Spring and Mud Pool</li>
+            
+        </ul>
+<br><br>
+        <a href="https://wztours.rezdy.com/711154/package-2-first-landing-village-mud-pool-tour?iframe=true" class="book">Book Now</a>
+    </div>
+</div>
+
+<!-- PACKAGE 3 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(2,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/package3/package3-kula.jpg">
+                <div class="caption">Kula Wild Adventure Park</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package3/package3-lawai.jpg">
+                <div class="caption">Lawai Pottery Village</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package3/package3-sigatoka.jpg">
+                <div class="caption">Sigatoka Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package3/package3-nadihandicraft.jpg">
+                <div class="caption">Sigatoka Handicraft Market</div>
+            </div>
+
+            
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(2,1)">❯</button>
+    </div>
+
+    <div class="content">
+	    <center><h2><u>Package 3</u> <br>Coral Coast Tour</h2> 
+       <br>
+      <div class="price">US$175/P</div>
+		 
+		 
+		<h3 style="color: #00a86b;">Children from 3-11 years 50% DISCOUNT</h3> </center>
+        <p class="desc">Explore Fiji’s beautiful Coral Coast, a popular destination filled with culture, nature, and adventure. Visit Kula Wild Adventure Park to discover endangered wildlife while walking through lush tropical forest boardwalks. Experience authentic Fijian traditions at Lawai Pottery Village with a Kava ceremony, pottery demonstration, and guided village tour. End your journey in Sigatoka Town, where you can browse local markets, shop for souvenirs, and enjoy fresh tropical fruits. This tour is a perfect way to experience the true beauty and culture of Fiji.<br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>Kula Wild Adventure Park</li>
+            <li>Lawai Pottery Village</li>
+			<li>Sigatoka Town and Market</li>
+            
+        </ul>
+<br>
+        <a href="https://wztours.rezdy.com/711155/package-3-coral-coast-tour?iframe=true" class="book">Book Now</a>
+    </div>
+</div>
+
+<!-- PACKAGE 4 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(3,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/package4/package4-mauibay.jpg">
+                <div class="caption">Maui Bay Sigatoka</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package4/package4-mauibay2.jpg">
+                <div class="caption">Maui Bay Sigatoka</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package4/package4-mauibay3.jpg">
+                <div class="caption">Maui Bay Sigatoka</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package4/package4-suva.jpg">
+                <div class="caption">Suva Capital City</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package4/package4-suva2.jpg">
+                <div class="caption">Suva Capital City</div>
+            </div>
+			
+			<div class="slide">
+                <img src="images/package4/package4-museum.jpg">
+                <div class="caption">Fiji Museum</div>
+            </div>
+			
+			<div class="slide">
+                <img src="images/package4/package4-museum2.jpg">
+                <div class="caption">Fiji Museum</div>
+            </div>
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(3,1)">❯</button>
+    </div>
+
+    <div class="content">
+	    <center><h2><u>Package 4</u> <br>Suva City Tour</h2> </center>
+       
+       <center><div class="price">US$490.00 for total 3pax</div>
+		 
+		 
+		<h3 style="color: #00a86b;">4 to 12 pax for US$675.00</h3> </center>
+        <p class="desc">Experience the beauty, culture, and history of Fiji on an unforgettable Suva City Tour. Journey along the scenic Queen’s Highway and the stunning Coral Coast before arriving in Suva, the lively capital of Fiji. Explore the famous Fiji Museum and discover fascinating archaeological collections and cultural artifacts that showcase Fiji’s rich heritage. Visit the vibrant Suva Market to browse local handicrafts, enjoy fresh tropical produce, and experience the daily life of the locals. As you travel back through the breathtaking landscapes of Viti Levu, enjoy spectacular coastal and mountain views that make this tour a memorable Fiji adventure.<br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>Maui Bay Sigatoka</li>
+            <li>Fiji Museum</li>
+			<li>Suva Capital City</li>
+            
+        </ul>
+<br>
+        <a href="https://wztours.rezdy.com/711156/package-4-suva-city-tour?iframe=true" class="book">Book Now</a>
+    </div>
+</div>
+
+<!-- PACKAGE 5 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(4,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/package5/package5-waterfall.jpg">
+                <div class="caption">Sleeping Giant Waterfall</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package5/package5-waterfall2.jpg">
+                <div class="caption">Sleeping Giant Waterfall </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package5/package5-mudpool.jpg">
+                <div class="caption">Mud Pool</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package5/package5-mudpool2.jpg">
+                <div class="caption">Mud Pool</div>
+            </div>
+
+            
+			
+			 <div class="slide">
+                <img src="images/package5/package5-hotspring.jpg">
+                <div class="caption">Hot Spring</div>
+            </div>
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(4,1)">❯</button>
+    </div>
+
+    <div class="content">
+	    <center><h2><u>Package 5</u> <br>Waterfall and Mud Pool Tour</h2> </center>
+       
+       <center><div class="price">US$150/P</div>
+		 
+		 
+		<h3 style="color: #00a86b;">Children from 3-11 years US$125/child</h3> </center>
+        <p class="desc">Discover the natural wonders of Fiji with our Waterfall and Mud Pool Tour, combining adventure, relaxation, and authentic local experiences. Enjoy a scenic 30-minute trek to the breathtaking Sleeping Giant Waterfall, where you can swim, explore, and unwind in a peaceful tropical setting. Continue your journey to the famous hot springs and mud pools, known for their soothing and rejuvenating properties. For a truly traditional experience, you may also enjoy a Fijian Boboo massage provided by local village women at an additional cost. This tour is perfect for travelers looking to experience the beauty, culture, and relaxation that Fiji has to offer.<br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>Sleeping Giant Waterfall</li>
+            <li>Hot Spring</li>
+			<li>Mud Pool</li>
+            
+        </ul>
+<br>
+        <a href="https://wztours.rezdy.com/711157/package-5-waterfall-mud-pool-tour?iframe=true" class="book">Book Now</a>
+    </div>
+</div>
+
+<!-- PACKAGE 6 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(5,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/package6/package6-nausori.jpg">
+                <div class="caption">Nausori Highland</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package6/package6-nausorivillage.jpg">
+                <div class="caption">Village Visit</div>
+            </div>
+
+            
+        </div>
+
+        <button class="nav next" onclick="moveSlide(5,1)">❯</button>
+    </div>
+
+    <div class="content">
+	    <center><h2><u>Package 6</u> <br>Nausori Highland Tour</h2> </center>
+       
+       <center><div class="price">US$198/P</div>
+		 
+		 
+		<h3 style="color: #00a86b;">Children from 3-11 years 50% DISCOUNT</h3> </center>
+        <p class="desc">Explore the breathtaking Nausori Highlands on this scenic Fiji tour, one of the country’s hidden gems. Depart from Nadi and enjoy a stunning drive through winding mountain roads, traditional villages, and lush tropical scenery. Experience a warm welcome at a local village, where you can learn about Fijian culture, hear traditional stories, and gain insight into everyday village life. This Highlands adventure is a must-do in Fiji, offering the perfect blend of natural beauty, culture, and authentic local experiences for curious travelers.<br><br><br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>Nausori Highland - Scenic Beauty</li>
+            <li>Village Visit</li>
+			
+            
+        </ul>
+<br><br>
+        <a href="https://wztours.rezdy.com/711160/package-6-nausori-highland-tour?iframe=true" class="book">Book Now</a>
+    </div>
+</div>
+
+</div>
+<center><h1>Cancellation Procedure</h1>
+<p>Any cancellation with 0-48 hours prior to departure will incur 100% cancellation fee. Amendment of tour date should be notified 24 hours prior to departure time. <br>All cancellation should be emailed with the order number to <b>westerzaiftours@hotmail.com</b> or contacted on <b>+679 9694828</b>     </p>
+<br> <br>
+</center>
+
+<script>
+
+const index = [0,0,0,0,0,0];
+
+// MANUAL SLIDE FUNCTION (unchanged)
+function moveSlide(card, dir){
+
+    const sliders = document.querySelectorAll(".slides");
+    const total = sliders[card].children.length;
+
+    index[card] += dir;
+
+    if(index[card] >= total){
+        index[card] = 0;
+    }
+
+    if(index[card] < 0){
+        index[card] = total - 1;
+    }
+
+    sliders[card].style.transform =
+        `translateX(-${index[card] * 100}%)`;
+}
+
+
+// AUTO SLIDESHOW (every 3 seconds)
+function autoSlide(card){
+
+    const sliders = document.querySelectorAll(".slides");
+    const total = sliders[card].children.length;
+
+    setInterval(() => {
+
+        index[card]++;
+
+        if(index[card] >= total){
+            index[card] = 0;
+        }
+
+        sliders[card].style.transform =
+            `translateX(-${index[card] * 100}%)`;
+
+    }, 3000);
+}
+
+
+// START ALL SLIDERS
+for(let i = 0; i < 6; i++){
+    autoSlide(i);
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

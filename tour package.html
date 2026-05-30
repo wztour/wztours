@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WZ Tours</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">dirEngine.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item active"><a href="tour.html" class="nav-link">Tour</a></li>
+          <li class="nav-item"><a href="hotel.html" class="nav-link">Hotels</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item cta"><a href="contact.html" class="nav-link"><span>Add listing</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_3.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>Tour</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Destinationa</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+						
+			<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    overflow-x:hidden;
+}
+
+.section-title{
+    text-align:center;
+    padding:70px 20px 30px;
+}
+
+.section-title h1{
+    font-size:48px;
+    color:#0a2540;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#666;
+    font-size:18px;
+}
+
+.packages{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
+    gap:35px;
+    padding-bottom:80px;
+}
+
+.package-card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 35px rgba(0,0,0,0.12);
+    transition:0.5s;
+    position:relative;
+    animation:fadeUp 1s ease;
+}
+
+.package-card:hover{
+    transform:translateY(-12px) scale(1.02);
+    box-shadow:0 15px 45px rgba(0,0,0,0.18);
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.slider{
+    position:relative;
+    width:100%;
+    height:260px;
+    overflow:hidden;
+}
+
+.slides{
+    display:flex;
+    width:500%;
+    height:100%;
+    transition:0.6s ease-in-out;
+}
+
+.slides img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.nav-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,0.7);
+    border:none;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:22px;
+    font-weight:bold;
+    z-index:10;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    background:#fff;
+    transform:translateY(-50%) scale(1.1);
+}
+
+.prev{
+    left:15px;
+}
+
+.next{
+    right:15px;
+}
+
+.package-content{
+    padding:28px;
+}
+
+.package-content h2{
+    color:#0a2540;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.description{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.price{
+    font-size:32px;
+    color:#00a86b;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.cover-list{
+    margin-bottom:25px;
+}
+
+.cover-list li{
+    list-style:none;
+    margin-bottom:10px;
+    color:#444;
+    position:relative;
+    padding-left:25px;
+}
+
+.cover-list li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:#00a86b;
+    font-weight:bold;
+}
+
+.book-btn{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    background:linear-gradient(135deg,#0077ff,#00c6ff);
+    color:#fff;
+    padding:15px;
+    border-radius:14px;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.book-btn:hover{
+    background:linear-gradient(135deg,#005be4,#00a2d8);
+    transform:scale(1.03);
+}
+
+@media(max-width:500px){
+
+    .section-title h1{
+        font-size:34px;
+    }
+
+    .package-card{
+        margin:0 10px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:60px 20px 30px;
+}
+
+header h1{
+    font-size:42px;
+    color:#0a2540;
+}
+
+header p{
+    color:#666;
+}
+
+/* GRID */
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+    padding-bottom:80px;
+}
+
+/* CARD */
+.card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* SLIDER */
+.slider{
+    position:relative;
+    overflow:hidden;
+    height:260px;
+}
+
+/* SLIDES WRAPPER */
+.slides{
+    display:flex;
+    transition:0.6s ease-in-out;
+}
+
+/* EACH SLIDE */
+.slide{
+    min-width:100%;
+    height:260px;
+    position:relative;
+    overflow:hidden;
+}
+
+/* IMAGE FIX (IMPORTANT) */
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;       /* prevents stretching */
+    object-position:center;  /* keeps focus center */
+}
+
+/* CAPTION OVER IMAGE */
+.caption{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:12px 15px;
+    background:linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+    color:#fff;
+    font-size:15px;
+}
+
+/* NAV BUTTONS */
+.nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,0.7);
+    border:none;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+    z-index:10;
+}
+
+.nav:hover{
+    background:#fff;
+}
+
+.prev{ left:10px; }
+.next{ right:10px; }
+
+/* CONTENT */
+.content{
+    padding:20px;
+}
+
+.content h2{
+    color:#0a2540;
+}
+
+.price{
+    color:#00a86b;
+    font-size:26px;
+    font-weight:700;
+    margin:10px 0;
+}
+
+.desc{
+    color:#666;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+ul{
+    list-style:none;
+    margin:10px 0 15px;
+}
+
+ul li{
+    padding-left:18px;
+    position:relative;
+    margin-bottom:6px;
+}
+
+ul li::before{
+    content:"✓";
+    color:#00a86b;
+    position:absolute;
+    left:0;
+}
+
+/* BUTTON */
+.book{
+    display:block;
+    text-align:center;
+    padding:12px;
+    background:linear-gradient(135deg,#0077ff,#00c6ff);
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.book:hover{
+    opacity:0.9;
+}
+
+/* RESPONSIVE */
+@media(max-width:500px){
+    header h1{
+        font-size:32px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Tour Packages</h1>
+    <p>Explore amazing destinations around the world</p>
+</header>
+
+<div class="container">
+
+<!-- PACKAGE 1 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(0,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/package1/package1-naditemple.jpg">
+                <div class="caption">Sri Siva Subramaniya Temple</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package1/package1-mudpool.jpg">
+                <div class="caption">Hot Spring and Mud Pool</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package1/package1-nadimarket.jpg">
+                <div class="caption">Nadi Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package1/package1-nadihandicraft.jpg">
+                <div class="caption">Nadi Handicraft Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/package1/package1-naditown.jpg">
+                <div class="caption">Nadi Town</div>
+            </div>
+			
+			<div class="slide">
+                <img src="images/dest6-sleepinggaint.jpg">
+                <div class="caption">Garden of the Sleeping Giant</div>
+            </div>
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(0,1)">❯</button>
+    </div>
+
+    <div class="content">
+        <center><h2><u>Package 1</u> <br>Nadi Half Day</h2>  <br>
+        <div class="price">US$90/P</div>
+		 
+		<h3 style="color: #00a86b;">Children from 3-11 years 50% DISCOUNT</h3></center>
+        <p class="desc">Explore the best of Nadi with guided tours to top attractions including the Sri Siva Subramaniya Swami Temple, Hot Spring Mud Pool, Garden of the Sleeping Giant, Nadi Town, and local handicraft markets. Enjoy authentic Fijian culture, friendly expert guides, and affordable tour packages designed for adventure, sightseeing, and unforgettable Fiji travel experiences.<br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>Sri Siva Subramaniya Temple</li>
+            <li>Hot Spring and Mud Pool</li>
+            <li>Nadi Market</li>
+            <li>Nadi Handicraft Market</li>
+			<li>Nadi Town</li>
+			<li>Garden of the Sleeping Giant</li>
+        </ul>
+
+        <a href="#" class="book">Book Now</a>
+    </div>
+</div>
+
+<!-- PACKAGE 2 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(1,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/dest1-naditemple.jpg">
+                <div class="caption">Sri Siva Subramaniya Temple</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest2-mudpool.jpg">
+                <div class="caption">Hot Spring and Mud Pool</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest3-nadimarket.jpg">
+                <div class="caption">Nadi Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest4-nadihandicraft.jpg">
+                <div class="caption">Nadi Handicraft Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest5-naditown.jpg">
+                <div class="caption">Nadi Town</div>
+            </div>
+			
+			<div class="slide">
+                <img src="images/dest6-sleepinggaint.jpg">
+                <div class="caption">Garden of the Sleeping Giant</div>
+            </div>
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(1,1)">❯</button>
+    </div>
+
+    <div class="content">
+	    <center><h2><u>Package 2</u> <br>First Landing Village & Hot Spring Mud Pool Tour</h2> </center>
+       
+       <center><div class="price">US$85/P</div>
+		 
+		<h3 style="color: #00a86b;">Children from 3-11 years 50% DISCOUNT</h3> </center>
+        <p class="desc">Discover the rich cultural heritage of Fiji at the First Landing Village, believed to be the landing site of the first Fijians on Viti Levu. Experience an authentic guided village tour, connect with friendly locals, and learn about traditional Fijian customs and way of life. Continue your adventure inland with a relaxing visit to the famous hot springs and mud pools, known for their natural healing and rejuvenating benefits. This unique tour offers the perfect blend of culture, relaxation, and adventure, making it a must-do experience for visitors exploring Fiji.<br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>First Landing Village</li>
+            <li>Hot Spring and Mud Pool</li>
+            
+        </ul>
+<br><br>
+        <a href="#" class="book">Book Now</a>
+    </div>
+</div>
+
+<!-- PACKAGE 3 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(2,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/dest1-naditemple.jpg">
+                <div class="caption">Sri Siva Subramaniya Temple</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest2-mudpool.jpg">
+                <div class="caption">Hot Spring and Mud Pool</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest3-nadimarket.jpg">
+                <div class="caption">Nadi Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest4-nadihandicraft.jpg">
+                <div class="caption">Nadi Handicraft Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest5-naditown.jpg">
+                <div class="caption">Nadi Town</div>
+            </div>
+			
+			<div class="slide">
+                <img src="images/dest6-sleepinggaint.jpg">
+                <div class="caption">Garden of the Sleeping Giant</div>
+            </div>
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(2,1)">❯</button>
+    </div>
+
+    <div class="content">
+	    <center><h2><u>Package 3</u> <br>Coral Coast Tour</h2> 
+       <br>
+      <div class="price">US$175/P</div>
+		 
+		 
+		<h3 style="color: #00a86b;">Children from 3-11 years 50% DISCOUNT</h3> </center>
+        <p class="desc">Explore Fiji’s beautiful Coral Coast, a popular destination filled with culture, nature, and adventure. Visit Kula Wild Adventure Park to discover endangered wildlife while walking through lush tropical forest boardwalks. Experience authentic Fijian traditions at Lawai Pottery Village with a Kava ceremony, pottery demonstration, and guided village tour. End your journey in Sigatoka Town, where you can browse local markets, shop for souvenirs, and enjoy fresh tropical fruits. This tour is a perfect way to experience the true beauty and culture of Fiji.<br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>Kula Wild Adventure Park</li>
+            <li>Lawai Pottery Village</li>
+			<li>Sigatoka Town and Market</li>
+            
+        </ul>
+<br>
+        <a href="#" class="book">Book Now</a>
+    </div>
+</div>
+
+<!-- PACKAGE 4 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(3,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/dest1-naditemple.jpg">
+                <div class="caption">Sri Siva Subramaniya Temple</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest2-mudpool.jpg">
+                <div class="caption">Hot Spring and Mud Pool</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest3-nadimarket.jpg">
+                <div class="caption">Nadi Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest4-nadihandicraft.jpg">
+                <div class="caption">Nadi Handicraft Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest5-naditown.jpg">
+                <div class="caption">Nadi Town</div>
+            </div>
+			
+			<div class="slide">
+                <img src="images/dest6-sleepinggaint.jpg">
+                <div class="caption">Garden of the Sleeping Giant</div>
+            </div>
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(3,1)">❯</button>
+    </div>
+
+    <div class="content">
+	    <center><h2><u>Package 4</u> <br>Suva City Tour</h2> </center>
+       
+       <center><div class="price">US$490.00 for total 3pax</div>
+		 
+		 
+		<h3 style="color: #00a86b;">4 to 12 pax for US$675.00</h3> </center>
+        <p class="desc">Experience the beauty, culture, and history of Fiji on an unforgettable Suva City Tour. Journey along the scenic Queen’s Highway and the stunning Coral Coast before arriving in Suva, the lively capital of Fiji. Explore the famous Fiji Museum and discover fascinating archaeological collections and cultural artifacts that showcase Fiji’s rich heritage. Visit the vibrant Suva Market to browse local handicrafts, enjoy fresh tropical produce, and experience the daily life of the locals. As you travel back through the breathtaking landscapes of Viti Levu, enjoy spectacular coastal and mountain views that make this tour a memorable Fiji adventure.<br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>Maui Bay Sigatoka</li>
+            <li>Fiji Museum</li>
+			<li>Suva Capital City</li>
+            
+        </ul>
+<br>
+        <a href="#" class="book">Book Now</a>
+    </div>
+</div>
+
+<!-- PACKAGE 5 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(4,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/dest1-naditemple.jpg">
+                <div class="caption">Sri Siva Subramaniya Temple</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest2-mudpool.jpg">
+                <div class="caption">Hot Spring and Mud Pool</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest3-nadimarket.jpg">
+                <div class="caption">Nadi Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest4-nadihandicraft.jpg">
+                <div class="caption">Nadi Handicraft Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest5-naditown.jpg">
+                <div class="caption">Nadi Town</div>
+            </div>
+			
+			<div class="slide">
+                <img src="images/dest6-sleepinggaint.jpg">
+                <div class="caption">Garden of the Sleeping Giant</div>
+            </div>
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(4,1)">❯</button>
+    </div>
+
+    <div class="content">
+	    <center><h2><u>Package 5</u> <br>Waterfall and Mud Pool Tour</h2> </center>
+       
+       <center><div class="price">US$150/P</div>
+		 
+		 
+		<h3 style="color: #00a86b;">Children from 3-11 years US$125/child</h3> </center>
+        <p class="desc">Discover the natural wonders of Fiji with our Waterfall and Mud Pool Tour, combining adventure, relaxation, and authentic local experiences. Enjoy a scenic 30-minute trek to the breathtaking Sleeping Giant Waterfall, where you can swim, explore, and unwind in a peaceful tropical setting. Continue your journey to the famous hot springs and mud pools, known for their soothing and rejuvenating properties. For a truly traditional experience, you may also enjoy a Fijian Boboo massage provided by local village women at an additional cost. This tour is perfect for travelers looking to experience the beauty, culture, and relaxation that Fiji has to offer.<br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>Sleeping Giant Waterfall</li>
+            <li>Hot Spring</li>
+			<li>Mud Pool</li>
+            
+        </ul>
+<br>
+        <a href="#" class="book">Book Now</a>
+    </div>
+</div>
+
+<!-- PACKAGE 6 -->
+<div class="card">
+    <div class="slider">
+        <button class="nav prev" onclick="moveSlide(5,-1)">❮</button>
+
+        <div class="slides">
+
+            <div class="slide">
+                <img src="images/dest1-naditemple.jpg">
+                <div class="caption">Sri Siva Subramaniya Temple</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest2-mudpool.jpg">
+                <div class="caption">Hot Spring and Mud Pool</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest3-nadimarket.jpg">
+                <div class="caption">Nadi Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest4-nadihandicraft.jpg">
+                <div class="caption">Nadi Handicraft Market</div>
+            </div>
+
+            <div class="slide">
+                <img src="images/dest5-naditown.jpg">
+                <div class="caption">Nadi Town</div>
+            </div>
+			
+			<div class="slide">
+                <img src="images/dest6-sleepinggaint.jpg">
+                <div class="caption">Garden of the Sleeping Giant</div>
+            </div>
+
+        </div>
+
+        <button class="nav next" onclick="moveSlide(5,1)">❯</button>
+    </div>
+
+    <div class="content">
+	    <center><h2><u>Package 6</u> <br>Nausori Highland Tour</h2> </center>
+       
+       <center><div class="price">US$198/P</div>
+		 
+		 
+		<h3 style="color: #00a86b;">Children from 3-11 years 50% DISCOUNT</h3> </center>
+        <p class="desc">Explore the breathtaking Nausori Highlands on this scenic Fiji tour, one of the country’s hidden gems. Depart from Nadi and enjoy a stunning drive through winding mountain roads, traditional villages, and lush tropical scenery. Experience a warm welcome at a local village, where you can learn about Fijian culture, hear traditional stories, and gain insight into everyday village life. This Highlands adventure is a must-do in Fiji, offering the perfect blend of natural beauty, culture, and authentic local experiences for curious travelers.<br><br><br><br> This package includes visits to the following destinations:</p>
+
+        <ul>
+	
+            <li>Nausori Highland - Scenic Beauty</li>
+            <li>Village Visit</li>
+			
+            
+        </ul>
+<br><br>
+        <a href="#" class="book">Book Now</a>
+    </div>
+</div>
+
+</div>
+
+<script>
+
+const index = [0,0,0,0,0,0];
+
+// MANUAL SLIDE FUNCTION (unchanged)
+function moveSlide(card, dir){
+
+    const sliders = document.querySelectorAll(".slides");
+    const total = sliders[card].children.length;
+
+    index[card] += dir;
+
+    if(index[card] >= total){
+        index[card] = 0;
+    }
+
+    if(index[card] < 0){
+        index[card] = total - 1;
+    }
+
+    sliders[card].style.transform =
+        `translateX(-${index[card] * 100}%)`;
+}
+
+
+// AUTO SLIDESHOW (every 3 seconds)
+function autoSlide(card){
+
+    const sliders = document.querySelectorAll(".slides");
+    const total = sliders[card].children.length;
+
+    setInterval(() => {
+
+        index[card]++;
+
+        if(index[card] >= total){
+            index[card] = 0;
+        }
+
+        sliders[card].style.transform =
+            `translateX(-${index[card] * 100}%)`;
+
+    }, 3000);
+}
+
+
+// START ALL SLIDERS
+for(let i = 0; i < 6; i++){
+    autoSlide(i);
+}
+
+</script>
+
+
+
+
+	
+          
+		        
+ 
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">dirEngine</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">About</a></li>
+                <li><a href="#" class="py-2 d-block">Service</a></li>
+                <li><a href="#" class="py-2 d-block">Terms and Conditions</a></li>
+                <li><a href="#" class="py-2 d-block">Become a partner</a></li>
+                <li><a href="#" class="py-2 d-block">Best Price Guarantee</a></li>
+                <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Customer Support</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">FAQ</a></li>
+                <li><a href="#" class="py-2 d-block">Payment Option</a></li>
+                <li><a href="#" class="py-2 d-block">Booking Tips</a></li>
+                <li><a href="#" class="py-2 d-block">How it works</a></li>
+                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+     
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+
+
+
+  </body>
+</html>
